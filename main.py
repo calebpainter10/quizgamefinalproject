@@ -38,8 +38,9 @@ class MultipleChoice(Question):
     def __init__(self, title, answer, difficulty, options: dict):
         super().__init__(title, answer, difficulty)
 
-        if answer.lower() not in ["a", "b", "c", "d"]:
-            raise ValueError("Unexpected answer")
+        for a in answer:
+            if a.lower() not in ["a", "b", "c", "d"]:
+                raise ValueError("Unexpected answer") 
 
         self.options = options
 
@@ -47,8 +48,9 @@ class TrueFalse(Question):
     def __init__(self, title, answer, difficulty, options: dict):
         super().__init__(title, answer, difficulty)
 
-        if answer.lower() not in ["true", "false", "t", "f"]:
-            raise ValueError("Unexpected answer")
+        for a in answer:
+            if a.lower() not in ["true", "false", "t", "f"]:
+                raise ValueError("Unexpected answer")
         
         self.options = options
 
@@ -78,8 +80,6 @@ class QuizLinkedList:
             difficulty = q["difficulty"]
             answers = q["data"]
             answer = q["answer"]
-            
-            print(title, qtype, difficulty, answers, answer)
 
             if qtype == "Multiple Choice":
                 self.add_question(node=MultipleChoice(title, answer, difficulty, options=answers))
@@ -120,8 +120,8 @@ class QuizLinkedList:
                     print("Correct!\n[Blinking Green LED]")
                     print("---------------------------")
                     break
-                elif response not in ["a", "b", "c", "d", "true", "false", "t", "f"]: # Response is not valid
-                    print("Invalid input detected.")
+                elif isinstance(current_question, MultipleChoice) and response not in ["a", "b", "c", "d"] or isinstance(current_question, TrueFalse) and response not in ["true", "false", "t", "f"]: # Response is not valid
+                    print("Invalid input detected. If the question is multiple choice, make sure to reply with the correct letter choice (e.g. 'a')")
                 else: # Incorrect
                     print("Incorrect!\n[Solid Red LED]")
                     print(f"Unfortunately, you have lost the game. You got to: ${prize_ladder[question_number - 1] if question_number != 1 else '0'}")
