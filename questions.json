@@ -1,0 +1,226 @@
+{
+    
+    "questions": [
+        {
+            "title": "Which author wrote Romeo and Juliet?",
+            "type": "Multiple Choice",
+            "difficulty": 1,
+            "data": {
+                "a": "William Shakespeare",
+                "b": "Oscar Wilde",
+                "c": "Edgar Allen Poe"
+            },
+            "answer": "a"
+        },
+        {
+            "title": "What is the largest mammal in the world?",
+            "type": "Multiple Choice",
+            "difficulty": 2,
+            "data": {
+                "a": "Orca Whale",
+                "b": "Blue Whale",
+                "c": "Mongolian Elephant",
+                "d": "White Rhinoceros"
+            },
+            "answer": "b"
+        },
+        {
+            "title": "Euclid is widely regarded as the father of geometry.",
+            "type": "True/False",
+            "difficulty": 2,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "True"
+        },
+        {
+            "title": "Who is the 18th president of the United States?",
+            "type": "Multiple Choice",
+            "difficulty": 4,
+            "data": {
+                "a": "Andrew Johnson",
+                "b": "Abraham Lincoln",
+                "c": "Ulysses S. Grant",
+                "d": "Richard Nixon"
+            },
+            "answer": "c"
+        },
+        {
+            "title": "The Titanic sunk in 1912.",
+            "type": "True/False",
+            "difficulty": 3,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "True"
+        },
+        {
+            "title": "What is the element symbol for Tungsten on the periodic table?",
+            "type": "Multiple Choice",
+            "difficulty": 3,
+            "data": {
+                "a": "Tg",
+                "b": "Ts",
+                "c": "W",
+                "d": "Ws"
+            },
+            "answer": "c"
+        },
+        {
+            "title": "The 50th state to enter the United State is Alaska",
+            "type": "True/False",
+            "difficulty": 2,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "False"
+        },
+        {
+            "title": "In what year was the United Nations established?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "1946",
+                "b": "1937",
+                "c": "1948",
+                "d": "1945"
+            },
+            "answer": "d"
+        },
+        {
+            "title": "Fluorine is the most reactive element on the periodic table.",
+            "type": "True/False",
+            "difficulty": 4,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "T"
+        },
+        {
+            "title": "What is the longest river in Asia?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "The Yangtze River",
+                "b": "The Ganges River",
+                "c": "The Yellow River"
+            },
+            "answer": "a"
+        },
+        {
+            "title": "Sherlock Holmes' partner was Benedict Cucumerbatch.",
+            "type": "True/False",
+            "difficulty": 1,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "False"
+        },
+        {
+            "title": "Who wrote Sherlock Holmes?",
+            "type": "Multiple Choice",
+            "difficulty": 4,
+            "data": {
+                "a": "Sir Dwayne Doyle",
+                "b": "Sir Arthur Conan Doyle",
+                "c": "Lord Jamie III",
+                "d": "Lady Leslie Hawkins"
+            },
+            "answer": "b"
+        },
+        {
+            "title": "The largest state by land area in the United States is Texas",
+            "type": "True/False",
+            "difficulty": 3,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "False"
+        },
+        {
+            "title": "What is the largest moon of Jupiter?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "Titan",
+                "b": "Ceres",
+                "c": "Callisto",
+                "d": "Ganymede"
+            },
+            "answer": "d"
+        },
+        {
+            "title": "Which country has the most UNESCO World Heritage sites?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "Germany",
+                "b": "England",
+                "c": "Italy",
+                "d": "United States"
+            },
+            "answer": "c"
+        },
+        {
+            "title": "The name for the plastic tip on the end of a shoelace is: 'aglet'",
+            "type": "True/False",
+            "difficulty": 4,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "True"
+        },
+        {
+            "title": "What is the smallest independent country in South America by area?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "Chile",
+                "b": "Suriname",
+                "c": "Bolivia",
+                "d": "Colombia"
+            },
+            "answer": "b"
+        },
+        {
+            "title": "What is the rarest naturally occuring element?",
+            "type": "Multiple Choice",
+            "difficulty": 5,
+            "data": {
+                "a": "Yttrium",
+                "b": "Cadmium",
+                "c": "Bismuth",
+                "d": "Astatine"
+            },
+            "answer": "d"
+        },
+        {
+            "title": "The Earth is flat.",
+            "type": "True/False",
+            "difficulty": 1,
+            "data": {
+                "T": "True",
+                "F": "False"
+            },
+            "answer": "False"
+        },
+        {
+            "title": "What is the smallest prime number?",
+            "type": "Multiple Choice",
+            "difficulty": 3,
+            "data": {
+                "a": "1",
+                "b": "2",
+                "c": "3"
+            },
+            "answer": "b"
+        }
+    ]
+}
