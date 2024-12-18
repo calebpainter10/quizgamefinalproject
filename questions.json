@@ -29,10 +29,10 @@
             "type": "True/False",
             "difficulty": 2,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["True", "T"]
+            "answer": ["True", "a"]
         },
         {
             "title": "Who is the 18th president of the United States?",
@@ -51,10 +51,10 @@
             "type": "True/False",
             "difficulty": 3,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["True", "T"]
+            "answer": ["True", "a"]
         },
         {
             "title": "What is the element symbol for Tungsten on the periodic table?",
@@ -73,10 +73,10 @@
             "type": "True/False",
             "difficulty": 2,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["False", "F"]
+            "answer": ["False", "b"]
         },
         {
             "title": "In what year was the United Nations established?",
@@ -95,10 +95,10 @@
             "type": "True/False",
             "difficulty": 4,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["True", "T"]
+            "answer": ["True", "a"]
         },
         {
             "title": "What is the longest river in Asia?",
@@ -116,10 +116,10 @@
             "type": "True/False",
             "difficulty": 1,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["False", "F"]
+            "answer": ["False", "b"]
         },
         {
             "title": "Who wrote Sherlock Holmes?",
@@ -138,10 +138,10 @@
             "type": "True/False",
             "difficulty": 3,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["False", "F"]
+            "answer": ["False", "b"]
         },
         {
             "title": "What is the largest moon of Jupiter?",
@@ -172,10 +172,10 @@
             "type": "True/False",
             "difficulty": 4,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["True", "T"]
+            "answer": ["True", "a"]
         },
         {
             "title": "What is the smallest independent country in South America by area?",
@@ -206,10 +206,10 @@
             "type": "True/False",
             "difficulty": 1,
             "data": {
-                "T": "True",
-                "F": "False"
+                "a": "True",
+                "b": "False"
             },
-            "answer": ["False", "F"]
+            "answer": ["False", "b"]
         },
         {
             "title": "What is the smallest prime number?",

@@ -1,7 +1,32 @@
 # ------ Imports ------
+import gpiozero
 import random
 import json
+import time
 import os
+
+# ------ LEDs -------
+button1 = gpiozero.Button(14)
+button2 = gpiozero.Button(15)
+button3 = gpiozero.Button(18)
+button4 = gpiozero.Button(17)
+
+class GameLED(gpiozero.LED):
+    def __init__(self, gpio_pin: int):
+        super().__init__(self, gpio_pin)
+    
+    def blink(self, time: int):
+        for _ in range(4):
+            self.on()
+            print("On!")
+
+            time.sleep(0.25)
+
+            self.off()
+            print("Off!")
+
+correct_led = GameLED(23)
+incorrect_led = GameLED(24)
 
 # ------ Static Variables ------
 prize_ladder = [
@@ -114,16 +139,31 @@ class QuizLinkedList:
             print("---------------------------")
 
             while True: # Ensure correct input
-                response = input("Your answer: ").lower()
+                if button1.is_pressed:
+                    response = "a"
+                    break
+                elif button2.is_pressed:
+                    response = "b"
+                    break
+                elif button3.is_pressed:
+                    response = "c"
+                    break
+                elif button4.is_pressed:
+                    response = "d"
+                    break
+
+                print("Your answer: {0}".format(response))
             
                 if response == current_question: # Correct
-                    print("Correct!\n[Blinking Green LED]")
+                    print("Correct!\n")
                     print("---------------------------")
+                    correct_led.blink()
                     break
                 elif isinstance(current_question, MultipleChoice) and response not in ["a", "b", "c", "d"] or isinstance(current_question, TrueFalse) and response not in ["true", "false", "t", "f"]: # Response is not valid
                     print("Invalid input detected. If the question is multiple choice, make sure to reply with the correct letter choice (e.g. 'a')")
                 else: # Incorrect
-                    print("Incorrect!\n[Solid Red LED]")
+                    print("Incorrect!\n")
+                    incorrect_led.blink()
                     print(f"Unfortunately, you have lost the game. You got to: ${prize_ladder[question_number - 1] if question_number != 1 else '0'}")
                     os._exit(0)
                 
