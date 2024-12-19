@@ -18,8 +18,9 @@ class GameLED(gpiozero.LED):
     def blink(self, times: int):
         for _ in range(times):
             self.on()
-            time.sleep(1/times)
+            time.sleep(1)
             self.off()
+            time.sleep(0.25)
 
 correct_led = GameLED(24)
 incorrect_led = GameLED(23)
