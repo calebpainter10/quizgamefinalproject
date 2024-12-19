@@ -13,20 +13,16 @@ button4 = gpiozero.Button(17)
 
 class GameLED(gpiozero.LED):
     def __init__(self, gpio_pin: int):
-        super().__init__(self, gpio_pin)
+        super().__init__(gpio_pin)
     
-    def blink(self, time: int):
-        for _ in range(4):
+    def blink(self, times: int):
+        for _ in range(times):
             self.on()
-            print("On!")
-
-            time.sleep(0.25)
-
+            time.sleep(1/times)
             self.off()
-            print("Off!")
 
-correct_led = GameLED(23)
-incorrect_led = GameLED(24)
+correct_led = GameLED(24)
+incorrect_led = GameLED(23)
 
 # ------ Static Variables ------
 prize_ladder = [
@@ -74,7 +70,7 @@ class TrueFalse(Question):
         super().__init__(title, answer, difficulty)
 
         for a in answer:
-            if a.lower() not in ["true", "false", "t", "f"]:
+            if a.lower() not in ["true", "false", "a", "b"]:
                 raise ValueError("Unexpected answer")
         
         self.options = options
@@ -139,33 +135,32 @@ class QuizLinkedList:
             print("---------------------------")
 
             while True: # Ensure correct input
+                response = None
+
                 if button1.is_pressed:
                     response = "a"
-                    break
                 elif button2.is_pressed:
                     response = "b"
-                    break
                 elif button3.is_pressed:
                     response = "c"
-                    break
                 elif button4.is_pressed:
                     response = "d"
-                    break
-
-                print("Your answer: {0}".format(response))
-            
-                if response == current_question: # Correct
-                    print("Correct!\n")
-                    print("---------------------------")
-                    correct_led.blink()
-                    break
-                elif isinstance(current_question, MultipleChoice) and response not in ["a", "b", "c", "d"] or isinstance(current_question, TrueFalse) and response not in ["true", "false", "t", "f"]: # Response is not valid
-                    print("Invalid input detected. If the question is multiple choice, make sure to reply with the correct letter choice (e.g. 'a')")
-                else: # Incorrect
-                    print("Incorrect!\n")
-                    incorrect_led.blink()
-                    print(f"Unfortunately, you have lost the game. You got to: ${prize_ladder[question_number - 1] if question_number != 1 else '0'}")
-                    os._exit(0)
+                
+                if response:
+                    print("Your answer: {0}".format(response))
+                
+                    if response == current_question: # Correct
+                        print("Correct!\n")
+                        print("---------------------------")
+                        correct_led.blink(4)
+                        break
+                    elif isinstance(current_question, MultipleChoice) and response not in ["a", "b", "c", "d"] or isinstance(current_question, TrueFalse) and response not in ["true", "false", "a", "b"]: # Response is not valid
+                        print("Invalid input detected. If the question is multiple choice, make sure to reply with the correct letter choice (e.g. 'a')")
+                    else: # Incorrect
+                        print("Incorrect!\n")
+                        incorrect_led.blink(1)
+                        print(f"Unfortunately, you have lost the game. You got to: ${prize_ladder[question_number - 2] if question_number != 1 else '0'}")
+                        os._exit(0)
                 
             question_number += 1
             current_question = current_question.next
